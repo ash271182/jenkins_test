@@ -6,7 +6,7 @@ pipeline {
                 // Your build steps go here
                 echo 'Building...'
                 script {
-                docker build -t myjenkins-blueocean:2.426.2-1 .
+                docker.build ("-t myjenkins-blueocean:2.426.2-1 .")
                 }
             }
         }
