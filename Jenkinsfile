@@ -5,7 +5,9 @@ pipeline {
             steps {
                 // Your build steps go here
                 echo 'Building...'
-                sh 'docker build -t myjenkins-blueocean:2.426.2-1 .'
+                script {
+                sh "docker build -t myjenkins-blueocean:2.426.2-1 ."
+                }
             }
         }
         stage('Test') {
